@@ -1,0 +1,120 @@
+:root {
+    --plyr-color-main:#00b3ff;
+    --plyr-control-spacing: 10px	;
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+
+#title{
+  
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    
+}
+
+h1{
+    margin: 5vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    line-height: 1.5;
+    
+}
+
+.container-fluid{
+    padding:3% 15%;
+}
+
+/* NavBar  FCF5E5*/
+.navbar-brand{
+    font-family: 'Ubuntu',sans-serif;
+    font-size:2.5rem;
+    font-weight:bold ;
+}
+
+.navbar{
+    height: 4.5rem;
+    background-color:#DCAE96;
+
+}
+
+
+.nav-item{
+    padding:0 10px;
+}
+
+.nav-link{
+    border: 1px solid black;
+    border-radius:15px;
+}
+
+.dropdown-menu{
+ background-color:#DCAE96;
+}
+
+.dropdown-menu .dropdown-item:hover{
+    font-size:1.2em;
+}
+
+/* Title Image */
+.title-image{
+    width: 60%;
+    transform: rotate(90deg);
+    margin:12px;
+}
+.title-image:hover{
+    transform: perspective(1000px) rotate(90deg) rotateX(-30deg);
+    transition: transform .5s ease-in-out;
+}
+/* Button */
+.btn{
+    margin:5vh;
+}
+
+
+/* contact */
+.contact{
+ display:block;
+ text-align:center;
+ justify-content:"center";
+ color:#fff; 
+}
+
+/* video player */
+#vid-player{
+    margin:20px auto;
+}
+
+#player{
+    display: flex;
+    margin: 5px auto;
+    align-items: center;
+    background-color:var(--plyr-color-main);
+    width: 80%;
+}
+
+/* game section */
+#game{
+    background-color:green ;
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    cursor: url('/images/crosshair.png'),auto;
+}
+
+.target{
+height:35px;
+width: 35px;
+z-index: 2;
+
+}
+
+
+.gunshot{
+    width:35px;
+    height:35px;
+    display: none;
+    transform: translate(50%,50%);
+}

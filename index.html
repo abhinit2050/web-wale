@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+
+  <!-- CDN for video player -->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+
+    <title>WEB-WALE</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu&display=swap" rel="stylesheet">
+    
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/7854a75122.js" crossorigin="anonymous"></script>
+  
+    <!-- custom style sheet -->
+    <link rel="stylesheet" href="CSS/styles.css">
+
+    
+  </head>
+
+<body>
+
+  <section id="title">
+  
+    <!-- Nav Bar -->
+    
+      <nav class="navbar navbar-expand-lg">
+        
+          <a class="navbar-brand" href="#">Web-Wale</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="">HOME</a></li>
+              <li class="nav-item"><a class="nav-link" href="">ABOUT US</a></li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">CONTACT
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Deepak@web-wale.com</a></li>
+                <li><a class="dropdown-item" href="#">Abhinit@web-wale.com</a></li>
+              </ul>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  SERVICES
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Premium</a></li>
+                  <li><a class="dropdown-item" href="#">Classic</a></li>
+                  <li><a class="dropdown-item" href="#">Standard</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+      </nav>
+  
+  
+      <!-- Title -->
+  
+      <div class="row">
+        <div class="col-lg-6 col-sm-12">
+          <h1>We make kick-ass websites, and nothing less</h1>
+          <button type="button" class="btn btn-dark btn-lg"><i class="fa-brands fa-apple"></i> Download</button>
+          <button type="button" class="btn btn-outline-light btn-lg"><i class="fa-brands fa-google-play"></i> Download</button>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+          <img class="title-image" src="images/webwale.jpeg" alt="web-dev">
+        </div>
+      </div>
+  </section>
+
+  <!-- game feature -->
+  <h3 style="color:red; text-align: center; margin:5px auto;">HIT THE TARGET AT LEAST 3 TIMES TO GET A DISCOUNT ON YOUR PURCHASE</h3>
+<section id="game">
+<img src="/images/red-dot.png" alt="target" class="target" id="target">
+<img src="/images/gunshot3.png" alt="gunshot" class="gunshot" id="gunshot">
+</section>
+
+  <!-- Video Player section -->
+  <section id="vid-player"> 
+    <video id="player" playsinline controls data-poster="/path/to/poster.jpg">
+	  <source src="video1.mp4" type="video/mp4" />
+	</video>
+  </section>
+
+
+<!-- bootstrap scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-/s7VB9sJ6U1dMOjKkACCXpX9TalaTlGUL8jTNU6m2PQETs5y1PT29a/VaTkpDl9+" crossorigin="anonymous"></script>
+
+<!-- video player script -->
+<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+
+<!-- local script -->
+<script src="/main.js"></script>
+</body>
+
+</html>
+
+
+
+
