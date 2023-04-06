@@ -12,7 +12,7 @@ let targetWidth = document.getElementById('target').offsetWidth;
         target.style.position = "absolute";
         target.style.left = targetX+"px";
         target.style.top = targetY+"px";
-    },10000)    
+    },5000)    
         
                 
 const crosshair = document.getElementById('game');
@@ -20,8 +20,8 @@ const gunshot = document.getElementById('gunshot');
 
 crosshair.addEventListener("click", (e)=>{
 
-    const gunshotLeft = (e.offsetX);
-    const gunshotTop = (e.offsetY+5);
+    const gunshotLeft = (e.offsetX-5);
+    const gunshotTop = (e.offsetY-5);
     
     gunshot.style.position = "relative";
     gunshot.style.left= gunshotLeft+"px";
@@ -29,10 +29,16 @@ crosshair.addEventListener("click", (e)=>{
     gunshot.style.setProperty('display','block');
     //crosshair.appendChild(gunshot);
 
-    console.log(e.target);
-    console.log(target);
+    const shotPositionX = (e.x);
+    const shotPositionY = (e.y);
+    const targetPositionX = (target.getBoundingClientRect().left);
+    const targetPositionY = (target.getBoundingClientRect().top);
+    console.log("shotposition X and Y = "+shotPositionX+" "+shotPositionY);
+    console.log("targetposition X and Y = "+targetPositionX+" "+targetPositionY);
 
-    if(e.target === target) {
+    if((shotPositionX <= targetPositionX+20 && shotPositionY <= targetPositionY+20) && 
+    
+        (shotPositionX >= targetPositionX-20 && shotPositionY >= targetPositionY-20)) {
         console.log("It's a HIT!");
     } else {
         console.log("It's a Miss!");
