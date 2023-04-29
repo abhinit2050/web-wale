@@ -6,6 +6,7 @@
 body{
     margin:0;
     padding:0;
+    background-color: #000;
 }
 
 #title{
@@ -80,6 +81,7 @@ h1{
  text-align:center;
  justify-content:"center";
  color:#fff; 
+ box-shadow: #999;
 }
 
 /* video player */
@@ -97,11 +99,12 @@ h1{
 
 /* game section */
 #game{
-    background-color:green ;
+    background:linear-gradient(45deg, #00dce9, #fff);
     height: 70vh;
     width: 100%;
     position: relative;
     cursor: url('/images/crosshair.png'),auto;
+    
 }
 
 .target{
@@ -140,6 +143,7 @@ z-index: 2;
     font-size: 30px;
     box-shadow: 2px 2px 3px #999;
     z-index: 100;
+    margin-right: 30px;
 }
 
 .whatsapp-icon {
@@ -150,6 +154,7 @@ z-index: 2;
 @media screen and (max-width: 767px) {
     .whatsapp-icon {
         margin-top: 10px;
+        
     }
 
     .whatsapp_float {
@@ -159,4 +164,294 @@ z-index: 2;
         right: 10px;
         font-size: 22px;
     }
+}
+
+/* google-map integration */
+#google-map{
+    width:100%;
+    height:50vh;
+    margin:15px auto;
+}
+
+/* chatbot */
+#zsiqchat{
+    display: flex;
+    justify-content: center;
+}
+
+/* api */
+#api{
+    background-color: #3E51FA;
+    height: 30vh;
+    margin: 5vh auto;
+    display: flex;
+    direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#api-btn{
+
+}
+
+/* contact us form  */
+/* contact us */
+.centre{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.form-class{
+    display: flex;
+    flex-direction: column;
+    background-color: #aedadb;
+    width:30vw;
+    height: 50vh;
+    margin: 30px auto;
+    border-radius: 10%;
+}
+
+.form-element{
+width:25vw;
+height:15vh;
+margin: 15px auto;
+border-radius: 10px;
+}
+
+#form-submit{
+    width:50%;
+    cursor: pointer;
+}
+
+
+/* game2 section  */
+.game2{
+    display: flex;
+    flex-wrap: wrap;
+    width:400px;
+    height: 300px;
+    margin: 10px auto;
+}
+
+.imgGame{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+/* about us section  */
+#about-us{
+    background-image: url('/images/about-us.jpeg');
+    color: #fff;
+    margin: 15px;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 10%;
+    width: 70vw;
+    margin: 2px auto;
+}
+
+@keyframes floating{
+    0%{
+        transform: translateX(-25px);
+    }
+
+    50%{
+        transform: translateX(25px) translateY(-25px);
+    }
+
+    to{
+        transform:translateX(-25px)
+    }
+
+   
+}
+
+@keyframes floating2{
+    0%{
+        transform: translateX(-25px);
+    }
+
+    50%{
+        transform: translateX(25px);
+    }
+
+    to{
+        transform:translateX(-25px)
+    }
+
+   
+}
+
+@keyframes floating3{
+    0%{
+        transform: translateX(25px);
+    }
+
+    50%{
+        transform: translateX(-25px) translateY(-25px);
+    }
+
+    to{
+        transform:translateX(25px)
+    }
+
+   
+}
+
+.card{
+    width:300px;
+    height:400px;
+    border: 2px solid #aedadb;
+    position: relative;
+    text-align: center;
+    margin:20px;
+    background-image: linear-gradient( 90.1deg,  rgba(84,212,228,1) 0.2%, rgba(68,36,164,1) 99.9% );
+    opacity: 0.4;
+    border-radius: 25px;
+   
+   
+    /* transition: transform 0.5s; */
+   
+}
+
+.card p{
+    position: relative;
+    top:25%;
+    font-size: 4rem;
+    font-family: 'Cabin', sans-serif;
+    color:#FFE985;
+   
+}
+
+.card:hover{
+    cursor: pointer;
+   
+}
+
+#who{
+    animation: floating 3s ease-in infinite;
+   
+}
+
+#who:hover{
+   
+    animation-play-state:paused;
+   
+}
+
+#what{
+    animation: floating2 4s ease-in infinite;
+}
+
+#what:hover{
+   
+    animation-play-state:paused;
+   
+}
+
+
+#why{
+    animation: floating3 5s ease-in infinite;
+
+}
+
+#why:hover{
+   
+    animation-play-state:paused;
+   
+}
+
+
+#modal-who{
+    visibility: hidden; 
+     background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+}
+
+#modal-what{
+    /* visibility: hidden; */
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+}
+
+#modal-why{
+    /* visibility: hidden; */
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+}
+
+
+
+.modal-text{
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    margin: 55px 25px;
+    font-family: 'Cabin', sans-serif;
+    font-size: 3rem;
+}
+
+.modal{
+    position: absolute;
+    background-color: azure;
+    width: 50%;
+    height: 50vh;
+    top:25%;
+    left:25%;
+    transform-origin: -50%;
+    visibility:hidden;
+}
+
+.modal-button{
+    font-size: 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    margin:5px auto;
+    position: absolute;
+    top:70%;
+    left: 45%;
+    cursor: pointer;
+}
+
+
+/* slingshot game  */
+#slingshot-game{
+    width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(36, 36, 36);
+}
+
+#slingsection{
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    background-color: #3E51FA;
+    height: 15vh;
+    font-size: 2rem;
+}
+
+#slingsection button{
+    background-color: #000;
+    height: 8vh;
+    width: 30%;
+    margin: 3vh auto;
+}
+
+#slingsection a{
+    text-decoration: none;
 }

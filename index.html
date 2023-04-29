@@ -18,6 +18,7 @@
   <!-- CDN for video player -->
   <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 
+ 
     <title>WEB-WALE</title>
 
     <!-- fonts -->
@@ -28,11 +29,13 @@
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/7854a75122.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+
   
     <!-- custom style sheet -->
     <link rel="stylesheet" href="CSS/styles.css">
 
-    
+   
   </head>
 
 <body>
@@ -130,10 +133,161 @@
       </a>
 </section>
 
+<!-- google map integration -->
+<section id="google-map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8909723388056!2d72.86797291451575!3d19.068530657163294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9280edeb66f%3A0x3fd241318179bc9e!2sBank%20of%20India!5e0!3m2!1sen!2sin!4v1680866427052!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<!-- chatbot -->
+<script type="text/javascript" id="zsiqchat">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode: "161c1bd8fdf30322da4b026b472fe0658cf458b861ba3d2c0413f64cd346a9dc", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.in/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);</script>
+
+<!-- API integration -->
+<!-- <div id="api">
+  <h1>Button to make a demo API call</h1>
+  <button id="auth-btn">Login with Zoho</button>
+  <button id="api-btn">API Call Button</button>
+
+</div> -->
+
+<!-- game 2 section -->
+<section style="background-color: blanchedalmond;margin: 10px;padding: 5px;">
+  <h2 style="color:teal; margin-top: 35px;" class="centre">Memory Game</h2>
+  <h6 style="color: teal;" class="centre">Score: <span id="result"></span></h6>
+  <div class="game2">
+   
+
+  </div>
+
+</section>
+
+ <!-- about us section  -->
+ <section id="about-us">
+  <h1> About us</h1>
+  <div class="cards">
+      <div class="card" id="who"><p>WHO?</p></div>
+      <div class="card" id="what"><p>WHAT?</p></div>
+      <div class="card" id="why"><p>WHY?</p></div>
+  </div>
+
+  <div class="modal" >
+      <h3 class="modal-text">We are an ordinary team who are passionate about adding great value to your business</h3>
+  <button class="modal-button" id="close-modal-who">CLOSE</button>
+  </div>
+
+  <div class="modal" id="modal-what">
+      <h3 class="modal-text">What we do is we build excellent websites and applications to push your business</h3>
+  <button class="modal-button" id="close-modal-what">CLOSE</button>
+  </div>
+
+  <div class="modal" id="modal-why">
+      <h3 class="modal-text">Why we do what we do is because adding value to the society provides us with joy</h3>
+  <button class="modal-button" id="close-modal-why">CLOSE</button>
+  </div>
+
+  
+</section>
+
+<!-- slingshot game -->
+<section id="slingsection">
+    <button><a href="/slingshot.html">Play</a></button>
+</section>
+  
+
+<!-- customer form  -->
+<h1 class="centre">You can contact us by filling out the below form</h1>
+        <form class="form-class">
+            <input class="form-element" id="name" type="text" placeholder="Your Name">
+            <input class="form-element" id="email" type="email" placeholder="Your email">
+            <input class="form-element" id="queries" type="text" placeholder="Your query - if any">
+            <button class="form-element" id="form-submit">Submit</button>
+
+        </form>
+
+<!-- axios cdn link -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+
+<!-- googlefont api -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- setting up SMTP server to send emails -->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+  
+<!-- push to email  -->
+<script src="/email.js"></script>
+
+<!-- js to card game -->
+<script src="/cardGame.js"></script>
 
 
-<!-- local script -->
-<script src="/main.js"></script>
+
+ <!-- local script -->
+ <script src="/main.js"></script>
+ <script src="/about.js"></script>
+ <script src="/slingshot.js"></script>
+ <script src="/matter.js"></script>
+
+ <!-- script for slingshot game  -->
+ <script>
+
+  let engine = Matter.Engine.create();
+
+  let render = Matter.Render.create({
+      element: document.body,
+      engine: engine,
+      options: {
+        width: 1600,
+        height: 800,
+        wireframes: false
+    }
+  });
+ 
+  let ground = Matter.Bodies.rectangle(1200, 500, 300, 20, { isStatic: true });
+  let ground2 = Matter.Bodies.rectangle(window.innerWidth/2, window.innerHeight/1.2, window.innerWidth, 60, { isStatic: true });
+  let floor = Matter.Bodies.rectangle(window.innerWidth/2, 3, window.innerWidth, 30, { isStatic: true });
+      
+      let rightWall = Matter.Bodies.rectangle((window.innerWidth)-400,innerHeight/2,30,window.innerHeight, {isStatic: true});
+
+ 
+  let ball = Matter.Bodies.circle(300, 600,20);
+  let sling = Matter.Constraint.create({
+        pointA: { x: 300, y: 600 },
+        bodyB: ball,
+        stiffness: 0.05
+    });
+ 
+  let mouse = Matter.Mouse.create(render.canvas);
+  let mouseConstraint = Matter.MouseConstraint.create(engine, {
+        mouse: mouse,
+        constraint: {
+            render: {visible: false}
+        }
+    });
+  render.mouse = mouse;
+ 
+  let firing = false;
+  Matter.Events.on(mouseConstraint,'enddrag', function(e) {
+    if(e.body === ball) firing = true;
+  });
+  Matter.Events.on(engine,'afterUpdate', function() {
+    if (firing && Math.abs(ball.position.x-300) < 20 && Math.abs(ball.position.y-600) < 20) {
+        ball = Matter.Bodies.circle(300, 600, 20);
+        Matter.World.add(engine.world, ball);
+        sling.bodyB = ball;
+        firing = false;
+    }
+  });
+
+  let stack = Matter.Composites.stack(1100, 270, 4, 4, 0, 0, function(x, y) {
+      return Matter.Bodies.polygon(x, y, 8, 30);
+  });
+
+  Matter.World.add(engine.world, [stack, ground, ground2, floor,
+      rightWall, ball, sling, mouseConstraint]);
+  Matter.Engine.run(engine);
+  Matter.Render.run(render);
+ 
+</script>
+
 </body>
 
 </html>
